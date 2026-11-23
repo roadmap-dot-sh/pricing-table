@@ -1,12 +1,3 @@
-*Thinking...*
-
-> **Tạo cấu trúc HTML**
-> 
-> Mình đang xây dựng một tệp `index.html` hoàn chỉnh bằng tiếng Việt, gồm phần đầu trang, điều hướng, nội dung chính và chân trang. Bảng sẽ dùng cấu trúc ngữ nghĩa với `caption` đặt đầu tiên, `thead`, `tbody` và `tfoot`. Mình cũng đang thêm `scope` cho các ô tiêu đề để cải thiện khả năng truy cập. Phần ghi chú cuối bảng sẽ dùng `colspan="4"` để gộp toàn bộ cột, còn nội dung mẫu sẽ trình bày các gói, dung lượng, dự án và hỗ trợ.
-
-Bạn chỉ cần tạo một file HTML có cấu trúc ngữ nghĩa và bảng truy cập được. Lưu đoạn dưới đây thành `index.html`:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +19,7 @@ Bạn chỉ cần tạo một file HTML có cấu trúc ngữ nghĩa và bảng 
   <main id="home">
     <h2>Plan comparison</h2>
 
-    <table>
+    <table >
       <caption>Comparison of Acme subscription plans</caption>
 
       <thead>
@@ -74,6 +65,3 @@ Bạn chỉ cần tạo một file HTML có cấu trúc ngữ nghĩa và bảng 
   </footer>
 </body>
 </html>
-```
-
-Đoạn này đáp ứng các yêu cầu chính: có `<header>`, `<main>`, `<footer>`; bảng có `<caption>`, `<thead>`, `<tbody>`; tiêu đề cột dùng `scope="col"` và tên gói dùng `scope="row"`. Ô cuối bảng dùng `colspan="4"` để gộp thành một hàng có ý nghĩa.
