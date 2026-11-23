@@ -1,0 +1,79 @@
+*Thinking...*
+
+> **Tạo cấu trúc HTML**
+> 
+> Mình đang xây dựng một tệp `index.html` hoàn chỉnh bằng tiếng Việt, gồm phần đầu trang, điều hướng, nội dung chính và chân trang. Bảng sẽ dùng cấu trúc ngữ nghĩa với `caption` đặt đầu tiên, `thead`, `tbody` và `tfoot`. Mình cũng đang thêm `scope` cho các ô tiêu đề để cải thiện khả năng truy cập. Phần ghi chú cuối bảng sẽ dùng `colspan="4"` để gộp toàn bộ cột, còn nội dung mẫu sẽ trình bày các gói, dung lượng, dự án và hỗ trợ.
+
+Bạn chỉ cần tạo một file HTML có cấu trúc ngữ nghĩa và bảng truy cập được. Lưu đoạn dưới đây thành `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Plans — Plan Comparison</title>
+</head>
+<body>
+  <header>
+    <h1>Acme Plans</h1>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <h2>Plan comparison</h2>
+
+    <table>
+      <caption>Comparison of Acme subscription plans</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Plan</th>
+          <th scope="col">Storage</th>
+          <th scope="col">Projects</th>
+          <th scope="col">Support</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Free</th>
+          <td>5 GB</td>
+          <td>3</td>
+          <td>Email</td>
+        </tr>
+        <tr>
+          <th scope="row">Pro</th>
+          <td>100 GB</td>
+          <td>25</td>
+          <td>Priority Email</td>
+        </tr>
+        <tr>
+          <th scope="row">Business</th>
+          <td>1 TB</td>
+          <td>Unlimited</td>
+          <td>24/7 Phone</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">All plans include SSL and daily backups</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MySite</p>
+  </footer>
+</body>
+</html>
+```
+
+Đoạn này đáp ứng các yêu cầu chính: có `<header>`, `<main>`, `<footer>`; bảng có `<caption>`, `<thead>`, `<tbody>`; tiêu đề cột dùng `scope="col"` và tên gói dùng `scope="row"`. Ô cuối bảng dùng `colspan="4"` để gộp thành một hàng có ý nghĩa.
