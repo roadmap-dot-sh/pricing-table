@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acme Plans — Plan Comparison</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Plans - Pricing Comparison</title>
+    <style>
+        /* CSS cơ bản để bảng hiển thị giống ảnh mẫu */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        caption {
+            text-align: left;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        tfoot td {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Acme Plans</h1>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Acme Plans</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  <main id="home">
-    <h2>Plan comparison</h2>
+    <main>
+        <table>
+            <caption>Plan comparison</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Plan</th>
+                    <th scope="col">Storage</th>
+                    <th scope="col">Projects</th>
+                    <th scope="col">Support</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Free</th>
+                    <td>5 GB</td>
+                    <td>3</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <th scope="row">Pro</th>
+                    <td>100 GB</td>
+                    <td>25</td>
+                    <td>Priority Email</td>
+                </tr>
+                <tr>
+                    <th scope="row">Business</th>
+                    <td>1 TB</td>
+                    <td>Unlimited</td>
+                    <td>24/7 Phone</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- Sử dụng colspan="4" để gộp 4 cột thành 1 hàng -->
+                    <td colspan="4">All plans include SSL and daily backups</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
 
-    <table >
-      <caption>Comparison of Acme subscription plans</caption>
+    <footer>
+        <p>&copy; 2025 MySite</p>
+    </footer>
 
-      <thead>
-        <tr>
-          <th scope="col">Plan</th>
-          <th scope="col">Storage</th>
-          <th scope="col">Projects</th>
-          <th scope="col">Support</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row">Free</th>
-          <td>5 GB</td>
-          <td>3</td>
-          <td>Email</td>
-        </tr>
-        <tr>
-          <th scope="row">Pro</th>
-          <td>100 GB</td>
-          <td>25</td>
-          <td>Priority Email</td>
-        </tr>
-        <tr>
-          <th scope="row">Business</th>
-          <td>1 TB</td>
-          <td>Unlimited</td>
-          <td>24/7 Phone</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <td colspan="4">All plans include SSL and daily backups</td>
-        </tr>
-      </tfoot>
-    </table>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 MySite</p>
-  </footer>
 </body>
 </html>
